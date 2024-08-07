@@ -66,7 +66,7 @@ export default function ThemeSwitch() {
       <DropdownTrigger>
         <Paintbrush className="text-accent" />
       </DropdownTrigger>
-      <DropdownContent side="right" sideOffSet={30}>
+      <DropdownContent side="left">
         <DropdownHeader>Customize Theme</DropdownHeader>
         <DropdownLabel>Mode</DropdownLabel>
         <DropdownItem>
