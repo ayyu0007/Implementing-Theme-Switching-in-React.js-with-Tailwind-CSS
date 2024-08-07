@@ -145,8 +145,8 @@ body,
   --muted: #d1d5db;
   --muted-foreground: #27272a;
 
-  --accent: #f8fafc;
-  --accent-hover: #f8fafce6;
+  --accent: #000000;
+  --accent-hover: #000000;
 
   --border: #f8fafc;
   --border-accent: #f8fafc;
