@@ -1,6 +1,7 @@
 // import { DropdownProvider } from "@/contexts/useDropdown";
 import { DropdownProvider } from "../contexts/UseDropdown";
 import { useTheme } from "next-themes";
+import { CgProfile } from "react-icons/cg";
 import { useEffect, useState } from "react";
 import { Moon, Paintbrush, Sun } from "lucide-react";
 import { cn } from "../lib/utils";
@@ -11,6 +12,11 @@ import {
   DropdownLabel,
   DropdownTrigger,
 } from "../ui/Dropdown";
+// import Profile from "./Profile/Profile";
+// import { Navigate, useNavigate } from "react-router-dom";
+
+
+
 
 const themes = {
   light: [
@@ -40,6 +46,11 @@ export default function ThemeSwitch() {
   });
   const { theme, setTheme } = useTheme();
 
+  // const  hendelOpen = ()=>{
+  //   Navigate = useNavigate;
+  //   Navigate("/profile");
+  // }
+
   useEffect(() => {
     setMounted(true);
     const storedMode = localStorage.getItem("mode");
@@ -66,6 +77,12 @@ export default function ThemeSwitch() {
       <DropdownTrigger>
         <Paintbrush className="text-accent" />
       </DropdownTrigger>
+      <div className="text-accent text-3xl flex float-end me-4 mt-2 cursor-pointer">
+        <a href="/profile">
+
+          <CgProfile />
+        </a>
+      </div>
       <DropdownContent side="left" sideOffSet={30}>
         <DropdownHeader>Customize Theme</DropdownHeader>
         <DropdownLabel>Mode</DropdownLabel>

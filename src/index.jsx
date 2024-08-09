@@ -4,14 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Provider from './components/providers/Provider';
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; // Correct import
+import Profile from './components/Profile/Profile';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Provider>
-      <App />
-    </Provider>
+    <BrowserRouter>
+      <Provider>
+        <Routes>
+          <Route path="/" element={<App />} /> 
+          <Route path='/profile' element={<Profile/>} />
+        </Routes>
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
